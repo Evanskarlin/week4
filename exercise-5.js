@@ -4,7 +4,12 @@ function ubahHuruf(kata) {
     var katabaru = '';
 
     for(i=0 ; i<kata.length ; i++){
+      if(kata[i] == "z"){
+        katabaru += "a";
+      }
+      else{
         katabaru += abjad[abjad.indexOf(kata[i])+1];
+      }
     }
     return katabaru;
 }
