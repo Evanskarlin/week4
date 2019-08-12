@@ -1,6 +1,6 @@
 function cariModus(arr) {
   // you can only write your code here!
-    arr.sort(function(a,b){return a-b });
+    // arr.sort(function(a,b){return a-b });
     var nilai;
     var samasemua = 0;
     var penampung = arr[0];
@@ -29,7 +29,7 @@ function cariModus(arr) {
 
 
     for(i=arr.length-1 ; i>=0 ; i--){
-        for(j=0 ; j<arr.length-1 ; j++){
+        for(j=arr.length-1 ; j>=0 ; j--){
             if(arr[j]==arr[i]){
                 count++
             }
