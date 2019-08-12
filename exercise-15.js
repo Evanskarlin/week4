@@ -1,26 +1,22 @@
 function highestScore (students) {
     // Code disini
-    var batch = [];
     var objek = {};
     
     for(var i = 0 ; i<students.length ; i++){
         var tertinggi = students[i]['score'];
-        var nama = '';
-        var kelas = [];
-        if(kelas.indexOf(students[i]['class']) == -1){
-            kelas.push(students[i]['class']);
-            for(var j = 0 ; j<students.length ; j++){
-                if(students[i]['class'] == students[j]['class'] && i != j){
-                    if(students[j]['score'] > tertinggi){
-                        tertinggi = students[j]['score'];
-                        nama = students[j]['name'];
-                        batch = students[j]['class'];
-                    }
+        var nama = students[i]['name'];
+        var batch = students[i]['class'];
+        for(var j = 0 ; j<students.length ; j++){
+            if(students[i]['class'] == students[j]['class'] && i != j){
+                if(students[j]['score'] > tertinggi){
+                    tertinggi = students[j]['score'];
+                    nama = students[j]['name'];
+                    batch = students[j]['class'];
                 }
-                objek[kelas] = {
-                    name: nama,
-                    score: tertinggi
-                }
+            }
+            objek[batch] = {
+                name: nama,
+                score: tertinggi
             }
         }
     }
