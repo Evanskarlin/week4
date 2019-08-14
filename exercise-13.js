@@ -1,9 +1,12 @@
 function deepSum (arr) {
     // Code disini
     var total = 0;
-    for(i=0 ; i<arr.length ; i++){
-        for(j=0 ; j<arr[i].length ; j++){
-            for(k=0 ; k<arr[i][j].length ; k++){
+    if (arr == ''){
+      return "No number";
+    }
+    for(var i=0 ; i<arr.length ; i++){
+        for(var j=0 ; j<arr[i].length ; j++){
+            for(var k=0 ; k<arr[i][j].length ; k++){
                 total += arr[i][j][k];
             }
         }
